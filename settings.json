@@ -1,0 +1,65 @@
+{
+    "editor.tabSize": 2,
+    "window.zoomLevel": 0,
+    "workbench.activityBar.visible": false,
+    "C_Cpp.errorSquiggles": "Disabled",
+    "cmake.cmakePath": "C:/Program Files/CMake/bin/cmake",
+    "cmake.preferredGenerators": [
+        "Ninja",
+        "Visual Studio 12",
+        "MinGW Makefiles"
+    ],
+    "cmake.generator": "Visual Studio 12",
+    "python.pythonPath": "C:\\Anaconda3\\python.exe",
+    "workbench.sideBar.location": "right",
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": true,
+    "window.menuBarVisibility": "default",
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    "editor.suggestSelection": "first",
+    "python.jediEnabled": true,
+    "[cpp]": {
+    
+  },
+  "terminal.integrated.rendererType": "dom",
+  "python.dataScience.sendSelectionToInteractiveWindow": false,
+  "extensions.ignoreRecommendations": true,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/node_modules/**": true
+  },
+  "git.enabled": false,
+  "git.autofetch": false,
+  "git.path": null,
+  "emmet.excludeLanguages": [
+    "markdown",
+    "python",
+    "c",
+    "cpp"
+  ],
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  
+  "workbench.colorTheme": "Seti Black",
+  "workbench.colorCustomizations": {
+    "sideBar.background":               "#242129",
+    "sideBarSectionHeader.border":      "#3b2c50",
+    "editor.background":                "#211e24",
+    "editor.lineHighlightBorder":       "#2c2a2a",
+    "editor.lineHighlightBackground":   "#131212",
+    "editorBracketMatch.background":    "#8d5311",
+    "editorBracketMatch.border":        "#222020",
+    "editor.hoverHighlightBackground":  "#2360993a",
+    "editorLineNumber.foreground":      "#939197",
+    "editorLineNumber.activeForeground":"#db802a",
+    "tab.border":                       "#b6b5b5",
+    "tab.activeBackground":             "#2a2f30",
+    "tab.activeBorder":                 "#ec8f24",
+    "tab.inactiveBackground":           "#1f1a1a",
+    "tab.inactiveForeground":           "#cac7c7",
+    "menu.background":                  "#211e24",
+    "editor.selectionBackground":       "#1875cc77",
+    "editor.selectionHighlightBorder":  "#bebebe54"
+  }
+}
