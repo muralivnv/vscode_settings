@@ -60,6 +60,8 @@
     "tab.inactiveForeground":           "#cac7c7",
     "menu.background":                  "#211e24",
     "editor.selectionBackground":       "#1875cc77",
-    "editor.selectionHighlightBorder":  "#bebebe54"
+    "editor.selectionHighlightBorder":  "#bebebe54",
+    "statusBar.background":             "#252327",
+    "statusBar.border":                 "#3f3349d7"
   }
 }
