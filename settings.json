@@ -45,7 +45,7 @@
   "workbench.colorCustomizations": {
     "sideBar.background":               "#242129",
     "sideBarSectionHeader.border":      "#3b2c50",
-    "editor.background":                "#211e24",
+    "editor.background":                "#272529",
     "editor.lineHighlightBorder":       "#2c2a2a",
     "editor.lineHighlightBackground":   "#131212",
     "editorBracketMatch.background":    "#8d5311",
@@ -53,15 +53,19 @@
     "editor.hoverHighlightBackground":  "#2360993a",
     "editorLineNumber.foreground":      "#939197",
     "editorLineNumber.activeForeground":"#db802a",
-    "tab.border":                       "#b6b5b5",
-    "tab.activeBackground":             "#2a2f30",
+    "tab.border":                       "#3b3b3b",
+    "tab.activeBackground":             "#0c0c0c",
     "tab.activeBorder":                 "#ec8f24",
-    "tab.inactiveBackground":           "#1f1a1a",
+    "tab.inactiveBackground":           "#242424",
     "tab.inactiveForeground":           "#cac7c7",
     "menu.background":                  "#211e24",
     "editor.selectionBackground":       "#1875cc77",
     "editor.selectionHighlightBorder":  "#bebebe54",
     "statusBar.background":             "#252327",
-    "statusBar.border":                 "#3f3349d7"
-  }
+    "statusBar.border":                 "#3f3349d7",
+    "titleBar.activeBackground":        "#2b2a2a",
+    "titleBar.border":                  "#3f3349d7"
+  },
+  "debug.showBreakpointsInOverviewRuler": true,
+  "workbench.statusBar.visible": true,
 }
