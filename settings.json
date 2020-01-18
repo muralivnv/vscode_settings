@@ -3,6 +3,7 @@
     "window.zoomLevel": 0,
     "workbench.activityBar.visible": false,
     "C_Cpp.errorSquiggles": "Disabled",
+    "C_Cpp.enhancedColorization": "Enabled",
     "cmake.cmakePath": "C:/Program Files/CMake/bin/cmake",
     "cmake.preferredGenerators": [
         "Ninja",
@@ -19,14 +20,18 @@
     "editor.suggestSelection": "first",
     "python.jediEnabled": true,
     "[cpp]": {
-    
   },
   "terminal.integrated.rendererType": "dom",
   "python.dataScience.sendSelectionToInteractiveWindow": false,
   "extensions.ignoreRecommendations": true,
   "files.watcherExclude": {
     "**/.git/objects/**": true,
-    "**/node_modules/**": true
+    "**/node_modules/**": true,
+  },
+  "files.exclude": {
+    "**/*.obj": true,
+    "**/*.pdb": true,
+    "**/*.ilk": true,
   },
   "git.enabled": false,
   "git.autofetch": false,
@@ -40,32 +45,123 @@
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
-  
-  "workbench.colorTheme": "Seti Black",
-  "workbench.colorCustomizations": {
-    "sideBar.background":               "#242129",
-    "sideBarSectionHeader.border":      "#3b2c50",
-    "editor.background":                "#272529",
-    "editor.lineHighlightBorder":       "#2c2a2a",
-    "editor.lineHighlightBackground":   "#131212",
-    "editorBracketMatch.background":    "#8d5311",
-    "editorBracketMatch.border":        "#222020",
-    "editor.hoverHighlightBackground":  "#2360993a",
-    "editorLineNumber.foreground":      "#939197",
-    "editorLineNumber.activeForeground":"#db802a",
-    "tab.border":                       "#3b3b3b",
-    "tab.activeBackground":             "#0c0c0c",
-    "tab.activeBorder":                 "#ec8f24",
-    "tab.inactiveBackground":           "#242424",
-    "tab.inactiveForeground":           "#cac7c7",
-    "menu.background":                  "#211e24",
-    "editor.selectionBackground":       "#1875cc77",
-    "editor.selectionHighlightBorder":  "#bebebe54",
-    "statusBar.background":             "#252327",
-    "statusBar.border":                 "#3f3349d7",
-    "titleBar.activeBackground":        "#2b2a2a",
-    "titleBar.border":                  "#3f3349d7"
-  },
   "debug.showBreakpointsInOverviewRuler": true,
   "workbench.statusBar.visible": true,
+  "workbench.colorCustomizations": {
+    "[Nord]": 
+      {
+        "editorLineNumber.foreground":      "#7d7e81",
+        "editorLineNumber.activeForeground":"#db802a",
+        "editor.selectionHighlightBorder":  "#5e81ac57",
+        "statusBar.border":                 "#5e81ac57",
+        "titleBar.border":                  "#5e81ac57"
+      },
+
+      "[Seti Black]": 
+      {
+        "sideBar.background":               "#242129",
+        "sideBarSectionHeader.border":      "#3b2c50",
+        "editor.background":                "#1f1f20",
+        "editor.lineHighlightBorder":       "#2c2a2a",
+        "editor.lineHighlightBackground":   "#131212",
+        "editorBracketMatch.background":    "#33312e10",
+        "editorBracketMatch.border":        "#ffffff8f",
+        "editor.hoverHighlightBackground":  "#2360993a",
+        "editorLineNumber.foreground":      "#939197",
+        "editorLineNumber.activeForeground":"#db802a",
+        "tab.border":                       "#3b3b3b",
+        "tab.activeBackground":             "#0c0c0c",
+        "tab.activeBorder":                 "#ec8f24",
+        "tab.inactiveBackground":           "#242424",
+        "tab.inactiveForeground":           "#cac7c7",
+        "menu.background":                  "#211e24",
+        "editor.selectionBackground":       "#454546a4",
+        "editor.selectionHighlightBorder":  "#bebebe54",
+        "statusBar.background":             "#252327",
+        "statusBar.border":                 "#3f3349d7",
+        "statusBar.foreground":             "#c0c0c0",
+        "titleBar.activeBackground":        "#2b2a2a",
+        "titleBar.border":                  "#3f3349d7"
+      },
+  },
+
+  "editor.tokenColorCustomizations": {
+    "[Seti Black]": 
+      { 
+        "textMateRules": [
+        {
+          "scope": "variable.parameter",
+          "settings": {
+            "fontStyle": "",
+            "foreground": "#d18a38" //"#d19438"
+            }
+        },
+        {
+          "scope": ["punctuation.separator.pointer-access.cpp", "entity.name.function.member"],
+          "settings": {
+            "foreground": "#d7d7d7ff"
+          }
+        },
+        {
+          "scope": ["keyword.control.return"],
+          "settings": {
+            "fontStyle": "bold",
+            "foreground": "#fd2868"
+          }
+        },
+        {
+          "scope": "keyword.control",
+          "settings": {
+            "foreground": "#4b93d6"
+          }
+        },
+        {
+          "scope": ["keyword.control.directive", "keyword.other.typedef", "keyword.control.import", "entity.name.function.decorator.python"],
+          "settings": {
+            "foreground": "#e6008e"
+          }
+        },
+        {
+          "scope": ["keyword.operator", "keyword.operator.logical", "keyword.operator.assignment"],
+          "settings": {
+            "foreground": "#d7d7d7ff"
+          }
+        },
+        {
+          "scope": "storage.modifier.reference",
+          "settings": {
+            "foreground": "#b1b1b1"
+          }
+        },
+        {
+          "scope": ["entity.name.function","entity.name.class", "entity.other.inherited-class", "support.function", "support.class"],
+          "settings": {
+            "fontStyle": "",
+            "foreground": "#71c23b"
+          }
+        },
+        {
+          "scope": ["storage.type", "entity.name.type"],
+          "settings": {
+            "fontStyle": "",
+            "foreground": "#6CA9E1"//"#0fa6cc"
+          }
+        },
+        {
+          "scope": ["storage.modifier.specifier.const.cpp","storage.type.struct", "storage.type.class"],
+          "settings": {
+            "foreground": "#0de6b7"
+          }
+        },
+        {
+          "scope": ["string.quoted.double", "string.quoted.single"],
+          "settings": {
+            "foreground": "#ecea70"
+          }
+        }
+      ]
+      }
+
+  },
+  "workbench.colorTheme": "Seti Black"
 }
