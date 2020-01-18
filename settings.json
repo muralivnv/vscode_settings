@@ -97,13 +97,18 @@
             }
         },
         {
-          "scope": ["punctuation.separator.pointer-access.cpp", "entity.name.function.member"],
+          "scope": [
+            "punctuation.separator.pointer-access.cpp", 
+            "entity.name.function.member"
+          ],
           "settings": {
             "foreground": "#d7d7d7ff"
           }
         },
         {
-          "scope": ["keyword.control.return"],
+          "scope": [
+            "keyword.control.return"
+          ],
           "settings": {
             "fontStyle": "bold",
             "foreground": "#fd2868"
@@ -116,13 +121,22 @@
           }
         },
         {
-          "scope": ["keyword.control.directive", "keyword.other.typedef", "keyword.control.import", "entity.name.function.decorator.python"],
+          "scope": [
+            "keyword.control.directive", 
+            "keyword.other.typedef", 
+            "keyword.control.import", 
+            "entity.name.function.decorator.python"
+          ],
           "settings": {
             "foreground": "#e6008e"
           }
         },
         {
-          "scope": ["keyword.operator", "keyword.operator.logical", "keyword.operator.assignment"],
+          "scope": [
+            "keyword.operator", 
+            "keyword.operator.logical", 
+            "keyword.operator.assignment"
+          ],
           "settings": {
             "foreground": "#d7d7d7ff"
           }
@@ -134,27 +148,35 @@
           }
         },
         {
-          "scope": ["entity.name.function","entity.name.class", "entity.other.inherited-class", "support.function", "support.class"],
+          "scope": ["entity.name.function",
+            "entity.name.class", 
+            "entity.other.inherited-class", 
+            "support.function", 
+            "support.class"],
           "settings": {
             "fontStyle": "",
             "foreground": "#71c23b"
           }
         },
         {
-          "scope": ["storage.type", "entity.name.type"],
+          "scope": ["storage.type",
+             "entity.name.type"],
           "settings": {
             "fontStyle": "",
             "foreground": "#6CA9E1"//"#0fa6cc"
           }
         },
         {
-          "scope": ["storage.modifier.specifier.const.cpp","storage.type.struct", "storage.type.class"],
+          "scope": ["storage.modifier.specifier.const.cpp", 
+            "storage.type.struct",
+             "storage.type.class"],
           "settings": {
             "foreground": "#0de6b7"
           }
         },
         {
-          "scope": ["string.quoted.double", "string.quoted.single"],
+          "scope": ["string.quoted.double", 
+            "string.quoted.single"],
           "settings": {
             "foreground": "#ecea70"
           }
