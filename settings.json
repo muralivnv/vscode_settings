@@ -70,7 +70,7 @@
         "editorLineNumber.foreground":      "#939197",
         "editorLineNumber.activeForeground":"#db802a",
         "tab.border":                       "#3b3b3b",
-        "tab.activeBackground":             "#0c0c0c",
+        "tab.activeBackground":             "#131212",
         "tab.activeBorder":                 "#ec8f24",
         "tab.inactiveBackground":           "#242424",
         "tab.inactiveForeground":           "#cac7c7",
@@ -81,7 +81,8 @@
         "statusBar.border":                 "#3f3349d7",
         "statusBar.foreground":             "#c0c0c0",
         "titleBar.activeBackground":        "#2b2a2a",
-        "titleBar.border":                  "#3f3349d7"
+        "titleBar.border":                  "#3f3349d7",
+        "sideBar.border":                   "#080808",
       },
   },
 
@@ -98,8 +99,7 @@
         },
         {
           "scope": [
-            "punctuation.separator.pointer-access.cpp", 
-            "entity.name.function.member"
+            "punctuation.separator.pointer-access.cpp"
           ],
           "settings": {
             "foreground": "#d7d7d7ff"
@@ -128,7 +128,7 @@
             "entity.name.function.decorator.python"
           ],
           "settings": {
-            "foreground": "#e6008e"
+            "foreground": "#fd2868"//"#e6008e"
           }
         },
         {
@@ -148,7 +148,8 @@
           }
         },
         {
-          "scope": ["entity.name.function",
+          "scope": [
+            "entity.name.function",
             "entity.name.class", 
             "entity.other.inherited-class", 
             "support.function", 
@@ -159,31 +160,64 @@
           }
         },
         {
-          "scope": ["storage.type",
-             "entity.name.type"],
+          "scope": [
+            "storage.type",
+            "entity.name.type"
+          ],
           "settings": {
             "fontStyle": "",
             "foreground": "#6CA9E1"//"#0fa6cc"
           }
         },
         {
-          "scope": ["storage.modifier.specifier.const.cpp", 
+          "scope": [
+            "storage.modifier.specifier.const.cpp", 
             "storage.type.struct",
-             "storage.type.class"],
+            "storage.type.class"
+            ],
           "settings": {
             "foreground": "#0de6b7"
           }
         },
         {
-          "scope": ["string.quoted.double", 
-            "string.quoted.single"],
+          "scope": [
+            "string.quoted.double", 
+            "string.quoted.single"
+          ],
           "settings": {
             "foreground": "#ecea70"
           }
         }
       ]
+      },
+      
+      "[Base16 Tomorrow Dark]": 
+      {
+        "textMateRules": [
+          {
+            "scope": ["variable"],
+            "settings": {
+              "foreground": "#c5c8c6",
+              "fontStyle": ""
+            }
+          },
+          {
+            "scope": ["variable.parameter"],
+            "settings": {
+              "foreground": "#c97373"
+            }
+          }
+        ]
       }
 
   },
-  "workbench.colorTheme": "Seti Black"
+  "workbench.colorTheme": "Seti Black",
+
+  "editor.fontFamily": "JetBrains Mono, 'Courier New', monospace",
+  // "editor.fontFamily": "Consolas, 'Courier New', monospace",// default
+  "editor.fontSize": 13.5,
+  //"editor.letterSpacing": 1.2,
+  "editor.lineHeight": 22,
+  "editor.fontLigatures": false,
+  "debug.console.fontSize": 13.5,
 }
