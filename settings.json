@@ -48,6 +48,7 @@
   "debug.showBreakpointsInOverviewRuler": true,
   "workbench.statusBar.visible": true,
   "workbench.colorCustomizations": {
+    // https://code.visualstudio.com/api/references/theme-color
     "[Nord]": 
       {
         "editorLineNumber.foreground":      "#7d7e81",
@@ -61,6 +62,8 @@
       {
         "sideBar.background":               "#242129",
         "sideBarSectionHeader.border":      "#3b2c50",
+        "editorGroupHeader.tabsBackground":  "#1f1f20",
+        "editorGroupHeader.tabsBorder":        "#2c2c2c",
         "editor.background":                "#1f1f20",
         "editor.lineHighlightBorder":       "#2c2a2a",
         "editor.lineHighlightBackground":   "#131212",
@@ -70,7 +73,7 @@
         "editorLineNumber.foreground":      "#939197",
         "editorLineNumber.activeForeground":"#db802a",
         "tab.border":                       "#3b3b3b",
-        "tab.activeBackground":             "#131212",
+        "tab.activeBackground":             "#444343",
         "tab.activeBorder":                 "#ec8f24",
         "tab.inactiveBackground":           "#242424",
         "tab.inactiveForeground":           "#cac7c7",
