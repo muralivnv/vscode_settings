@@ -32,6 +32,7 @@
     "**/*.obj": true,
     "**/*.pdb": true,
     "**/*.ilk": true,
+    "**/*.dll": true,
   },
   "git.enabled": false,
   "git.autofetch": false,
@@ -62,8 +63,8 @@
       {
         "sideBar.background":               "#242129",
         "sideBarSectionHeader.border":      "#3b2c50",
-        "editorGroupHeader.tabsBackground":  "#1f1f20",
-        "editorGroupHeader.tabsBorder":        "#2c2c2c",
+        "editorGroupHeader.tabsBackground": "#1f1f20",
+        "editorGroupHeader.tabsBorder":     "#2c2c2c",
         "editor.background":                "#1f1f20",
         "editor.lineHighlightBorder":       "#2c2a2a",
         "editor.lineHighlightBackground":   "#131212",
@@ -97,7 +98,7 @@
           "scope": "variable.parameter",
           "settings": {
             "fontStyle": "",
-            "foreground": "#d18a38" //"#d19438"
+            "foreground":"#e7983e" //"#d19438"
             }
         },
         {
@@ -159,7 +160,7 @@
             "support.class"],
           "settings": {
             "fontStyle": "",
-            "foreground": "#71c23b"
+            "foreground": "#7dd443"
           }
         },
         {
@@ -190,6 +191,15 @@
           "settings": {
             "foreground": "#ecea70"
           }
+        },
+        {
+          "scope":[
+            "storage.type.class.doxygen.cpp",
+          ],
+          "settings": {
+            "foreground": "#999797",
+            "fontStyle": "bold"
+          }
         }
       ]
       },
@@ -216,11 +226,16 @@
   },
   "workbench.colorTheme": "Seti Black",
 
-  // "editor.fontFamily": "JetBrains Mono, 'Courier New', monospace",
-  // "editor.fontFamily": "consolas, 'Courier New', monospace",
-  // "editor.fontSize": 13.5,
-  // //"editor.letterSpacing": 1.2,
-  // "editor.lineHeight": 22,
-  // "editor.fontLigatures": false,
-  // "debug.console.fontSize": 13.5,
+  "editor.fontFamily": "JetBrains Mono, 'Courier New', monospace",
+  "editor.fontSize": 13.5,
+  "editor.lineHeight": 22,
+  "editor.fontLigatures": false,
+  "debug.console.fontSize": 13.5,
+   
+  "python.dataScience.askForKernelRestart": false,
+  "python.dataScience.runStartupCommands": ["%config IPCompleter.use_jedi = False"],
+  "python.languageServer": "Jedi",
+  "python.dataScience.interactiveWindowMode": "perFile",
+  "window.titleSeparator": " ~ ",
+  "todo-tree.tree.showScanModeButton": false,
 }
