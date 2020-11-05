@@ -133,14 +133,14 @@
     "key": "ctrl+,",
     "command": "workbench.action.terminal.sendSequence",
     "args":{
-      "text": "python C:/Users/mural/fuzzy_search.py --search-file-content\u000D"
+      "text": "python %HOMEDRIVE%%HOMEPATH%/fuzzy_search.py --search-file-content\u000D"
     }
   },
   {
     "key": "ctrl+shift+,",
     "command": "workbench.action.terminal.sendSequence",
     "args":{
-      "text": "python C:/Users/mural/fuzzy_search.py --search-files\u000D"
+      "text": "python %HOMEDRIVE%%HOMEPATH%/fuzzy_search.py --search-files\u000D"
     }
   }
 ]

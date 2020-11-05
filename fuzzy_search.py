@@ -1,10 +1,10 @@
 from subprocess import check_output
-import os
-import sys
+from os import system
+from sys import argv
 
 search_type = "--search-file-content"
-if len(sys.argv) > 1:
-  search_type = sys.argv[1]
+if len(argv) > 1:
+  search_type = argv[1]
 
 def search_inside_files():
   return "rg --line-number \"\\w*\" | fzf"
@@ -21,6 +21,6 @@ try:
   file = check_output(cmd[search_type](), shell=True)
   file = file.decode("utf-8")
   file = ':'.join(file.split(':')[0:2])
-  os.system("code -g {0}".format(file))
+  system("code -g {0}".format(file))
 except:
   pass
