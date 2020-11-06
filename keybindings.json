@@ -129,18 +129,14 @@
     "command": "-editor.action.insertCursorBelow",
     "when": "editorTextFocus"
   },
-  {
-    "key": "ctrl+,",
-    "command": "workbench.action.terminal.sendSequence",
-    "args":{
-      "text": "python %HOMEDRIVE%%HOMEPATH%/fuzzy_search.py --search-file-content\u000D"
-    }
+  { 
+    "key": "ctrl+,", 
+    "command": "extension.multiCommand.execute" , 
+    "args": { "command": "multiCommand.fuzzySearchContent" },
   },
-  {
-    "key": "ctrl+shift+,",
-    "command": "workbench.action.terminal.sendSequence",
-    "args":{
-      "text": "python %HOMEDRIVE%%HOMEPATH%/fuzzy_search.py --search-files\u000D"
-    }
-  }
+ { 
+    "key": "ctrl+shift+,", 
+    "command": "extension.multiCommand.execute" , 
+    "args": { "command": "multiCommand.fuzzySearchFiles" },
+  },
 ]
