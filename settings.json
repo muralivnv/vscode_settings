@@ -225,7 +225,6 @@
 
   },
   "workbench.colorTheme": "Seti Black",
-
   "editor.fontFamily": "JetBrains Mono, 'Courier New', monospace",
   "editor.fontSize": 13.5,
   "editor.lineHeight": 22,
@@ -238,4 +237,30 @@
   "python.dataScience.interactiveWindowMode": "perFile",
   "window.titleSeparator": " ~ ",
   "todo-tree.tree.showScanModeButton": false,
+
+  // fuzzy-search multi-command extension commands
+  "multiCommand.commands": [
+    // search filenames
+    {
+      "command": "multiCommand.fuzzySearchFiles",
+      "sequence": [
+        "workbench.action.terminal.focus",
+        {
+          "command": "workbench.action.terminal.sendSequence", 
+          "args": {"text": "python %HOMEDRIVE%%HOMEPATH%/fuzzy_search.py --search-files\u000D"},
+        },
+      ]
+    },
+    // search contents inside files
+    {
+      "command": "multiCommand.fuzzySearchContent",
+      "sequence": [
+        "workbench.action.terminal.focus",
+        {
+          "command": "workbench.action.terminal.sendSequence", 
+          "args": {"text": "python %HOMEDRIVE%%HOMEPATH%/fuzzy_search.py --search-file-content\u000D"}
+        }
+      ]
+    },
+  ]
 }
