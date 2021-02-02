@@ -18,11 +18,9 @@
     "window.menuBarVisibility": "default",
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
     "editor.suggestSelection": "first",
-    "python.jediEnabled": true,
     "[cpp]": {
   },
-  "terminal.integrated.rendererType": "dom",
-  "python.dataScience.sendSelectionToInteractiveWindow": false,
+"terminal.integrated.rendererType": "dom",
   "extensions.ignoreRecommendations": true,
   "files.watcherExclude": {
     "**/.git/objects/**": true,
@@ -56,7 +54,11 @@
         "editorLineNumber.activeForeground":"#db802a",
         "editor.selectionHighlightBorder":  "#5e81ac57",
         "statusBar.border":                 "#5e81ac57",
-        "titleBar.border":                  "#5e81ac57"
+        "titleBar.border":                  "#5e81ac57",
+        "editor.background":                "#282d36",
+        "menu.background":                  "#282d36",
+        "statusBar.background":             "#282d36",
+        "sideBar.background":               "#282d36",
       },
 
       "[Seti Black]": 
@@ -221,20 +223,28 @@
             }
           }
         ]
-      }
+      },
 
+      "[Nord]":
+      {
+        "textMateRules": [
+          {
+            "scope": ["comment"],
+            "settings": {
+              "foreground": "#808a9e",
+              "fontStyle": ""
+            }
+          },
+        ]
+      }
   },
-  "workbench.colorTheme": "Seti Black",
+  "workbench.colorTheme": "Nord",
   "editor.fontFamily": "JetBrains Mono, 'Courier New', monospace",
   "editor.fontSize": 13.5,
   "editor.lineHeight": 22,
   "editor.fontLigatures": false,
   "debug.console.fontSize": 13.5,
-   
-  "python.dataScience.askForKernelRestart": false,
-  "python.dataScience.runStartupCommands": ["%config IPCompleter.use_jedi = False"],
   "python.languageServer": "Jedi",
-  "python.dataScience.interactiveWindowMode": "perFile",
   "window.titleSeparator": " ~ ",
   "todo-tree.tree.showScanModeButton": false,
 
@@ -262,5 +272,11 @@
         }
       ]
     },
-  ]
+],
+"jupyter.sendSelectionToInteractiveWindow": false,
+"jupyter.askForKernelRestart": false,
+"jupyter.runStartupCommands": [
+    "%config IPCompleter.use_jedi = False"
+],
+"jupyter.interactiveWindowMode": "perFile"
 }
