@@ -59,6 +59,7 @@
         "menu.background":                  "#282d36",
         "statusBar.background":             "#282d36",
         "sideBar.background":               "#282d36",
+        "editorGutter.background":          "#282d36"
       },
 
       "[Seti Black]": 
