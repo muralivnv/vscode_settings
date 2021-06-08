@@ -1,27 +1,54 @@
 {
-    "editor.tabSize": 2,
-    "window.zoomLevel": 0,
-    "workbench.activityBar.visible": false,
-    "C_Cpp.errorSquiggles": "Disabled",
-    "C_Cpp.enhancedColorization": "Enabled",
-    "cmake.cmakePath": "C:/Program Files/CMake/bin/cmake",
-    "python.pythonPath": "C:\\Anaconda3\\python.exe",
-    "editor.minimap.enabled": false,
-    "breadcrumbs.enabled": true,
-    "window.menuBarVisibility": "classic",
-    "terminal.integrated.defaultProfile.windows": "Command Prompt",
-    "editor.suggestSelection": "first",
+  // Common editor settings 
+  "editor.tabSize": 2,
+  "window.zoomLevel": 0,
+  "workbench.activityBar.visible": false,
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": true,
+  "window.menuBarVisibility": "classic",
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "editor.suggestSelection": "first",
   "extensions.ignoreRecommendations": true,
+  "workbench.statusBar.visible": true,
+  "window.titleSeparator": " ~ ",
+  "workbench.sideBar.location": "right",
+  "workbench.editor.untitled.hint": "hidden",
+
   "files.watcherExclude": {
     "**/.git/objects/**": true,
-    "**/node_modules/**": true,
+    "**/node_modules/**": true
   },
+
   "files.exclude": {
     "**/*.obj": true,
     "**/*.pdb": true,
     "**/*.ilk": true,
-    "**/*.dll": true,
+    "**/*.dll": true
   },
+
+  // language specific tool paths, settings 
+  // C/C++
+  "C_Cpp.errorSquiggles": "Disabled",
+  "C_Cpp.enhancedColorization": "Enabled",
+  "cmake.cmakePath": "C:/Program Files/CMake/bin/cmake",
+
+  // Python
+  "python.pythonPath": "C:\\Anaconda3\\python.exe",
+  "python.languageServer": "Jedi",
+  "jupyter.sendSelectionToInteractiveWindow": false,
+  "jupyter.askForKernelRestart": false,
+  "jupyter.runStartupCommands": [
+      "%config IPCompleter.use_jedi = False"
+  ],
+  "jupyter.interactiveWindowMode": "perFile",
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+
+  // Git
   "git.enabled": false,
   "git.autofetch": false,
   "git.path": null,
@@ -32,11 +59,17 @@
     "cpp"
   ],
 
+  // Debugging
+  "debug.showBreakpointsInOverviewRuler": true,
+
+  // Performance Improvements
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
-  "debug.showBreakpointsInOverviewRuler": true,
-  "workbench.statusBar.visible": true,
+
+  // Extensions ------------
+
+  // Theme customizations
   "workbench.colorCustomizations": {
     // https://code.visualstudio.com/api/references/theme-color
     "[Nord]": 
@@ -80,8 +113,8 @@
         "statusBar.foreground":             "#c0c0c0",
         "titleBar.activeBackground":        "#2b2a2a",
         "titleBar.border":                  "#3f3349d7",
-        "sideBar.border":                   "#080808",
-      },
+        "sideBar.border":                   "#080808"
+      }
   },
 
   "editor.tokenColorCustomizations": {
@@ -188,7 +221,7 @@
         },
         {
           "scope":[
-            "storage.type.class.doxygen.cpp",
+            "storage.type.class.doxygen.cpp"
           ],
           "settings": {
             "foreground": "#999797",
@@ -278,21 +311,33 @@
             "settings": {
               "foreground": "#ad6b72"
             }
-          },
+          }
         ]
       }
   },
 
+  // Font Customizations
   "workbench.colorTheme": "Seti Black",
   "editor.fontFamily": "JetBrains Mono, 'Courier New', monospace",
   "editor.fontSize": 13.5,
   "editor.lineHeight": 22,
   "editor.fontLigatures": false,
   "debug.console.fontSize": 13.5,
-  "python.languageServer": "Jedi",
-  "window.titleSeparator": " ~ ",
-  "todo-tree.tree.showScanModeButton": false,
 
+  // ToDo Tree
+  "todo-tree.tree.showScanModeButton": false,
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]"
+  ],
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+
+  // Multi-Commands
   // fuzzy-search multi-command extension commands
   "multiCommand.commands": [
     // search filenames
@@ -302,10 +347,11 @@
         "workbench.action.terminal.focus",
         {
           "command": "workbench.action.terminal.sendSequence", 
-          "args": {"text": "python %HOMEDRIVE%%HOMEPATH%/fuzzy_search.py --search-files\u000D"},
-        },
+          "args": {"text": "python %HOMEDRIVE%%HOMEPATH%/fuzzy_search.py --search-files\u000D"}
+        }
       ]
     },
+
     // search contents inside files
     {
       "command": "multiCommand.fuzzySearchContent",
@@ -316,34 +362,6 @@
           "args": {"text": "python %HOMEDRIVE%%HOMEPATH%/fuzzy_search.py --search-file-content\u000D"}
         }
       ]
-    },
-  ],
-
-  "jupyter.sendSelectionToInteractiveWindow": false,
-  "jupyter.askForKernelRestart": false,
-  "jupyter.runStartupCommands": [
-      "%config IPCompleter.use_jedi = False"
-  ],
-
-  "jupyter.interactiveWindowMode": "perFile",
-  "workbench.sideBar.location": "right",
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
     }
-  ],
-
-  "todo-tree.general.tags": [
-    "BUG",
-    "HACK",
-    "FIXME",
-    "TODO",
-    "XXX",
-    "[ ]",
-    "[x]"
-  ],
-
-  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
-  "workbench.editor.untitled.hint": "hidden"
+  ]
 }
