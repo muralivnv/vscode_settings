@@ -5,22 +5,12 @@
     "C_Cpp.errorSquiggles": "Disabled",
     "C_Cpp.enhancedColorization": "Enabled",
     "cmake.cmakePath": "C:/Program Files/CMake/bin/cmake",
-    "cmake.preferredGenerators": [
-        "Ninja",
-        "Visual Studio 12",
-        "MinGW Makefiles"
-    ],
-    "cmake.generator": "Visual Studio 12",
     "python.pythonPath": "C:\\Anaconda3\\python.exe",
-    "workbench.sideBar.location": "right",
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": true,
-    "window.menuBarVisibility": "default",
-    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    "window.menuBarVisibility": "classic",
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "editor.suggestSelection": "first",
-    "[cpp]": {
-  },
-"terminal.integrated.rendererType": "dom",
   "extensions.ignoreRecommendations": true,
   "files.watcherExclude": {
     "**/.git/objects/**": true,
@@ -41,6 +31,7 @@
     "c",
     "cpp"
   ],
+
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
@@ -236,10 +227,63 @@
               "fontStyle": ""
             }
           },
+          {
+            "scope": [
+              "keyword.control.directive", 
+              "keyword.other.typedef", 
+              "keyword.control.import", 
+              "entity.name.function.decorator.python"
+            ],
+            "settings": {
+              "foreground": "#ca757d"//"#e6008e"
+            }
+          },
+          {
+            "scope": [
+              "keyword.operator", 
+              "keyword.operator.logical", 
+              "keyword.operator.assignment"
+            ],
+            "settings": {
+              "foreground": "#81A1C1"
+            }
+          },
+          {
+            "scope": [
+              "storage.modifier.specifier.const.cpp", 
+              "storage.type.struct",
+              "storage.type.class"
+              ],
+            "settings": {
+              "foreground": "#81A1C1",
+              "fontStyle": "bold"
+            }
+          },
+          {
+            "scope": [
+              "storage.type",
+              "entity.name.type"
+            ],
+            "settings": {
+              "fontStyle": "",
+              "foreground": "#73a5a4"//"#0fa6cc"
+            }
+          },
+          {
+            "scope": [
+              "keyword.operator", 
+              "keyword.operator.logical", 
+              "keyword.operator.assignment"
+            ],
+            "settings": {
+              "foreground": "#ad6b72"
+            }
+          },
         ]
       }
   },
-  "workbench.colorTheme": "Nord",
+
+  "workbench.colorTheme": "Seti Black",
   "editor.fontFamily": "JetBrains Mono, 'Courier New', monospace",
   "editor.fontSize": 13.5,
   "editor.lineHeight": 22,
@@ -273,11 +317,33 @@
         }
       ]
     },
-],
-"jupyter.sendSelectionToInteractiveWindow": false,
-"jupyter.askForKernelRestart": false,
-"jupyter.runStartupCommands": [
-    "%config IPCompleter.use_jedi = False"
-],
-"jupyter.interactiveWindowMode": "perFile"
+  ],
+
+  "jupyter.sendSelectionToInteractiveWindow": false,
+  "jupyter.askForKernelRestart": false,
+  "jupyter.runStartupCommands": [
+      "%config IPCompleter.use_jedi = False"
+  ],
+
+  "jupyter.interactiveWindowMode": "perFile",
+  "workbench.sideBar.location": "right",
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]"
+  ],
+
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "workbench.editor.untitled.hint": "hidden"
 }
