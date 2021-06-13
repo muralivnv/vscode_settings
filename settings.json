@@ -6,14 +6,32 @@
   "editor.minimap.enabled": false,
   "breadcrumbs.enabled": true,
   "window.menuBarVisibility": "classic",
-  "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "editor.suggestSelection": "first",
   "extensions.ignoreRecommendations": true,
   "workbench.statusBar.visible": true,
   "window.titleSeparator": " ~ ",
   "workbench.sideBar.location": "right",
   "workbench.editor.untitled.hint": "hidden",
-
+  
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell",
+      "args": ["-NoProfile"]
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "terminal.integrated.automationShell.windows": "${env:windir}/System32/cmd.exe",
   "files.watcherExclude": {
     "**/.git/objects/**": true,
     "**/node_modules/**": true
@@ -41,12 +59,9 @@
       "%config IPCompleter.use_jedi = False"
   ],
   "jupyter.interactiveWindowMode": "perFile",
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
 
   // Git
   "git.enabled": false,
@@ -226,6 +241,50 @@
           "settings": {
             "foreground": "#999797",
             "fontStyle": "bold"
+          }
+        },
+
+        // Markdown Specific
+        {
+          "scope":[
+            "markup.heading"
+          ],
+          "settings": {
+            "foreground": "#6398c4",
+            "fontStyle": "bold"
+          }
+        },
+        {
+          "scope":[
+            "string.other.link.title.markdown"
+          ],
+          "settings": {
+            "foreground": "#fdc959",
+          }
+        },
+        {
+          "scope": [
+            "punctuation.definition.list.begin.markdown",
+            "markup.bold.markdown"
+          ],
+          "settings": {
+            "fontStyle": "bold"
+          }
+        },
+        {
+          "scope":[
+            "markup.italic.markdown"
+          ],
+          "settings": {
+            "fontStyle": "italic"
+          }
+        },
+        {
+          "scope": [
+            "markup.quote.markdown"
+          ],
+          "settings": {
+            "foreground": "#76eeb2",
           }
         }
       ]
